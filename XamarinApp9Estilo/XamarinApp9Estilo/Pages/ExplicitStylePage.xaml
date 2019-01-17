@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinApp9Estilo.App">
-    <Application.Resources>
+             x:Class="XamarinApp9Estilo.Pages.ExplicitStylePage"
+             Title="Explicit Style">
+    <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label" x:Key="TextPrimary">
                 <Setter Property="TextColor" Value="#007bff"></Setter>
@@ -80,5 +81,63 @@
                 <Setter Property="CornerRadius" Value="5"></Setter>
             </Style>
         </ResourceDictionary>
-    </Application.Resources>
-</Application>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="Text Primary"
+                       Style="{StaticResource TextPrimary}"
+                       HorizontalOptions="FillAndExpand"></Label>
+                <Label Text="Text Success"
+                       Style="{StaticResource TextSuccess}"
+                       HorizontalOptions="FillAndExpand"></Label>
+                <Label Text="Text Info"
+                       Style="{StaticResource TextInfo}"
+                       HorizontalOptions="FillAndExpand"></Label>
+                <Label Text="Text Warning"
+                       Style="{StaticResource TextWarning}"
+                       HorizontalOptions="FillAndExpand"></Label>
+                <Label Text="Text Danger"
+                       Style="{StaticResource TextDanger}"
+                       HorizontalOptions="FillAndExpand"></Label>
+                <StackLayout Style="{StaticResource AlertPrimary}">
+                    <Label Style="{StaticResource AlertPrimaryLabel}" 
+                           Text="A simple primary alert—check it out!"></Label>
+                </StackLayout>
+                <StackLayout Style="{StaticResource AlertSuccess}">
+                    <Label Style="{StaticResource AlertSuccessLabel}" 
+                           Text="A simple success alert—check it out!"></Label>
+                </StackLayout>
+                <StackLayout Style="{StaticResource AlertDanger}">
+                    <Label Style="{StaticResource AlertDangerLabel}" 
+                           Text="A simple danger alert—check it out!"></Label>
+                </StackLayout>
+                <StackLayout Style="{StaticResource AlertWarning}">
+                    <Label Style="{StaticResource AlertWarningLabel}" 
+                           Text="A simple warning alert—check it out!"></Label>
+                </StackLayout>
+                <StackLayout Style="{StaticResource AlertInfo}">
+                    <Label Style="{StaticResource AlertInfoLabel}" 
+                           Text="A simple info alert—check it out!"></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Button Style="{StaticResource BtnPrimary}" 
+                            Text="Button Primary"
+                            HorizontalOptions="Start"></Button>
+                    <Button Style="{StaticResource BtnSuccess}" 
+                            Text="Button Success"
+                            HorizontalOptions="Start"></Button>
+                    <Button Style="{StaticResource BtnDanger}" 
+                            Text="Button Danger"
+                            HorizontalOptions="Start"></Button>
+                    <Button Style="{StaticResource BtnWarning}" 
+                            Text="Button Warning"
+                            HorizontalOptions="Start"></Button>
+                    <Button Style="{StaticResource BtnInfo}" 
+                            Text="Button Info"
+                            HorizontalOptions="Start"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,14 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XamarinApp9Estilo"
+             xmlns:pages="clr-namespace:XamarinApp9Estilo.Pages"
              x:Class="XamarinApp9Estilo.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" 
+                     BackgroundColor="#0D1F2D">
+            <StackLayout>
+                <StackLayout BackgroundColor="#FFC926"
+                             Padding="5,10,5,10"
+                             Margin="0,0,0,10">
+                    <Image Source="xamarin_logo.png" 
+                           WidthRequest="100"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"></Image>
+                </StackLayout>
+                <ScrollView Orientation="Both">
+                    <StackLayout>
+                        <Button Text="Home"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToHome"></Button>
+                        <Button Text="Implicit Style"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToImplicitStyle"></Button>
+                        <Button Text="Explicit Style"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToExplicitStyle"></Button>
+                        <Button Text="Global Style"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToGlobalStyle"></Button>
+                        <Button Text="Inherit Style"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToInheritStyle"></Button>
+                        <Button Text="Dynamic Style"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Clicked="GoToDynamicStyle"></Button>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:Home></pages:Home>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
 
-</ContentPage>
+</MasterDetailPage>

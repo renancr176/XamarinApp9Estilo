@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp9Estilo.Pages.DynamicStylePage"
+             Title="Dynamic Style">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#007bff</Color>
+            <Color x:Key="Success">#28a745</Color>
+            <Color x:Key="Info">#17a2b8</Color>
+            <Color x:Key="Warning">#ffc107</Color>
+            <Color x:Key="Danger">#dc3545</Color>
+            <Color x:Key="LblColor">Black</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Primary Color"
+                   TextColor="{StaticResource Primary}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Success Color"
+                   TextColor="{StaticResource Success}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="Info Color"
+                   TextColor="{StaticResource Info}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="Warning Color"
+                   TextColor="{StaticResource Warning}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="Danger Color"
+                   TextColor="{StaticResource Danger}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="Dynamic Style - Exemplo de troca de cor dinamicamente"
+                   TextColor="{DynamicResource LblColor}"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Button Text="Dinamic Style - Trocar a cor da label"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_OnClicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
